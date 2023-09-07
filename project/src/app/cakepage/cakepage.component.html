@@ -1,0 +1,24 @@
+<!-- <p>cakepage works!</p>
+
+<p *ngFor="let t of cakedata">{{t.id}}</p> -->
+
+<div class="row py-3">
+    <ng-container *ngFor="let t of cakedata">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="bg-image hover-overlay" mdbRipple rippleColor="light">
+            <img #image src="{{ t.image }}" class="img-fluid" />
+            <a href="#!">
+              <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+            </a>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title" #title>{{t.title}} </h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <button (click)="add(t.image,t.title)" class="btn btn-primary">Button</button>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+  
