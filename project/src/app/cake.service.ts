@@ -23,6 +23,9 @@ deletefromdb='http://localhost:3000/data/delete'
 
     
 
+
+     
+
      ///cake api data
      getdata(){
      return this.http.get(this.url,{headers:this.header})

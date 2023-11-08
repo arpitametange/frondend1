@@ -15,13 +15,14 @@ this.get()
 
   }
    
-value=0
+value:any=[]
   
 
 get(){
 
   this.service.getdb().subscribe((res:any)=>{
     this.value=res.length
+  
     console.log(res.length,'length');
     
   });
